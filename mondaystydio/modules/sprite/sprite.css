@@ -1,0 +1,72 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-address {
+  background-image: url(sprite.png);
+  background-position: -80px -14px;
+  width: 11px;
+  height: 16px;
+}
+.icon-behavior-scenarios {
+  background-image: url(sprite.png);
+  background-position: 0px -40px;
+  width: 40px;
+  height: 38px;
+}
+.icon-check-grey {
+  background-image: url(sprite.png);
+  background-position: -80px -30px;
+  width: 11px;
+  height: 8px;
+}
+.icon-check-white {
+  background-image: url(sprite.png);
+  background-position: -80px -38px;
+  width: 11px;
+  height: 8px;
+}
+.icon-company {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 40px;
+  height: 40px;
+}
+.icon-competitors {
+  background-image: url(sprite.png);
+  background-position: -40px -40px;
+  width: 40px;
+  height: 33px;
+}
+.icon-mail {
+  background-image: url(sprite.png);
+  background-position: 0px -78px;
+  width: 15px;
+  height: 13px;
+}
+.icon-phone {
+  background-image: url(sprite.png);
+  background-position: -80px 0px;
+  width: 14px;
+  height: 14px;
+}
+.icon-target-audience {
+  background-image: url(sprite.png);
+  background-position: -40px 0px;
+  width: 40px;
+  height: 40px;
+}

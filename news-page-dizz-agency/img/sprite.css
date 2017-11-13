@@ -1,0 +1,108 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-angle-arrow-blue {
+  background-image: url(sprite.png);
+  background-position: -8px -48px;
+  width: 8px;
+  height: 12px;
+}
+.icon-angle-arrow {
+  background-image: url(sprite.png);
+  background-position: -41px -37px;
+  width: 7px;
+  height: 9px;
+}
+.icon-arrow {
+  background-image: url(sprite.png);
+  background-position: -48px -37px;
+  width: 4px;
+  height: 6px;
+}
+.icon-book {
+  background-image: url(sprite.png);
+  background-position: -52px 0px;
+  width: 14px;
+  height: 16px;
+}
+.icon-exit {
+  background-image: url(sprite.png);
+  background-position: -52px -16px;
+  width: 14px;
+  height: 16px;
+}
+.icon-facebook-big {
+  background-image: url(sprite.png);
+  background-position: -40px 0px;
+  width: 12px;
+  height: 20px;
+}
+.icon-facebook-min {
+  background-image: url(sprite.png);
+  background-position: 0px -48px;
+  width: 8px;
+  height: 12px;
+}
+.icon-google-plus-big {
+  background-image: url(sprite.png);
+  background-position: 0px -20px;
+  width: 21px;
+  height: 17px;
+}
+.icon-google-plus-min {
+  background-image: url(sprite.png);
+  background-position: -16px -37px;
+  width: 13px;
+  height: 11px;
+}
+.icon-linkedin-big {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 20px;
+  height: 20px;
+}
+.icon-linkedin-min {
+  background-image: url(sprite.png);
+  background-position: -40px -20px;
+  width: 12px;
+  height: 12px;
+}
+.icon-search {
+  background-image: url(sprite.png);
+  background-position: -21px -20px;
+  width: 16px;
+  height: 16px;
+}
+.icon-twitter-big {
+  background-image: url(sprite.png);
+  background-position: -20px 0px;
+  width: 20px;
+  height: 18px;
+}
+.icon-twitter-min {
+  background-image: url(sprite.png);
+  background-position: -29px -37px;
+  width: 12px;
+  height: 10px;
+}
+.icon-view {
+  background-image: url(sprite.png);
+  background-position: 0px -37px;
+  width: 16px;
+  height: 11px;
+}
