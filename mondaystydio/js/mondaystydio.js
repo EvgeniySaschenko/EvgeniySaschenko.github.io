@@ -24,6 +24,11 @@
 }).call(this);
 
 (function() {
+
+
+}).call(this);
+
+(function() {
   $(document).ready(function() {
     var widthNavList;
     $('.header .nav-toggler').on('click', function() {
@@ -59,6 +64,18 @@
       return widthNavList();
     });
     return widthNavList();
+  });
+
+}).call(this);
+
+(function() {
+  $(document).ready(function() {
+    $('.title-page').addClass('animated');
+    return $('.title-page').waypoint(function(e) {
+      return this.element.classList.add('bounceInLeft');
+    }, {
+      offset: "100%"
+    });
   });
 
 }).call(this);
