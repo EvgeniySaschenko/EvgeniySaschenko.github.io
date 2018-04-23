@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="keywords" content="meta_k .........text"/>
+    <meta name="description" content="meta_d ......text"/>
+    <title>Doc title</title>
+  </head>
+  <body>
+    <style>
+      .preloader{
+      height: 100vh;
+      width: 100%;
+      background-color: rgb(255,255,255);
+      color: rgb(36,111,176);
+      font-size: 45px;
+      font-family:  Arial, sans-serif;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition-duration: 1s;
+      display: none;
+      z-index: 10000;
+      }
+      .preloader.noload{
+      display: flex;
+      }
+      .preloader__text_1{
+      font-size: 45px;
+      }
+      .preloader__text_2{
+      font-size: 20px;
+      }
+      .wrapper.noload{
+      display: none;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+      	//document.querySelector('.wrapper').classList.remove('noload');
+      	document.querySelector('.preloader').classList.remove('noload');
+      });
+      
+    </script>
+    <div class="preloader"><span class="preloader__text_1">PRINTE</span><img src="data:image/png;base64,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" alt="preloader"/></div>
+    <div class="wrapper">
+      <script>
+        //document.querySelector('.wrapper').classList.add('noload');
+        document.querySelector('.preloader').classList.add('noload');
+      </script>
+      <header class="header">
+        <div class="container">
+          <div class="header__row header__row_1">
+            <div class="header__col header__col_1">
+              <div class="logo logo_header"><a class="logo__link" href="#"><img class="logo__img" src="img/logo.svg" alt="" role="presentation"/></a>
+              </div>
+            </div>
+            <div class="header__col header__col_2">
+              <div class="text-box text-box_header-regime">
+                <p class="text-box__text text-box__text_1">Качественная оперативная цифровая, <br> широкоформатная и сувенирная полиграфия!
+                </p>
+                <p class="text-box__text text-box__text_2">Работаем с 9 до 18, вс и сб выходные
+                </p>
+              </div>
+            </div>
+            <div class="header__col header__col_3">
+              <div class="text-box text-box_header-private-room"><i class="text-box__icon text-box__icon_user"></i><a class="text-box__link" href="#"><span class="text-box__text">Личный кабинет</span></a>
+              </div>
+            </div>
+            <div class="header__col header__col_4">
+              <div class="header__box header__box_1">
+                <div class="contacts contacts_header-mail">
+                  <div class="contacts__item"><a class="contacts__link" href="mailto:maket@test-vertka.ua">maket@test-vertka.ua</a>
+                  </div>
+                </div>
+                <div class="social-btn"><a class="social-btn__link social-btn__link_facebook" href="#"><i class="social-btn__icon social-btn__icon_facebook"></i></a>
+                </div>
+                <div class="contacts contacts_phone">
+                  <div class="contacts__item contacts__item_1"><i class="contacts__icon contacts__icon_phone"></i><a class="contacts__link" href="tel:380443454042">(044) 345-40-42</a><i class="contacts__icon contacts__icon_arrow-bottom-circle show-contacts show-contacts_phone"></i>
+                  </div>
+                  <div class="contacts__drop-box">
+                    <div class="contacts__item contacts__item_2"><i class="contacts__icon contacts__icon_mts"></i><a class="contacts__link" href="tel:380994455418">(099) 445-54-18</a>
+                    </div>
+                    <div class="contacts__item contacts__item_3"><i class="contacts__icon contacts__icon_kyivstar"></i><a class="contacts__link" href="tel:380964977803">(096) 497-78-03</a>
+                    </div>
+                    <div class="contacts__item contacts__item_4"><i class="contacts__icon contacts__icon_life"></i><a class="contacts__link" href="tel:38634351681">(063) 435-16-81</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__box header__box_2"><a class="btn btn_shopping-cart" href="#"><i class="btn__icon btn__icon_shopping-cart"></i><span class="btn__cout">3</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__row header__row_2">
+          <div class="container">
+            <nav class="nav nav_header">
+              <div class="nav__btn-burger" id="nav__btn-burger_header">
+                <div class="nav__btn-burger-item">
+                </div>
+                <div class="nav__btn-burger-item">
+                </div>
+                <div class="nav__btn-burger-item">
+                </div>
+              </div>
+              <ul class="nav__list" id="nav-list_header">
+                <li class="nav__item"><a class="nav__link" href="#">Главная</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">Продукция</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">Новости</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">База знаний</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">О нас</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#">Контакты</a>
+                </li>
+                <li class="nav__item nav__item_search">
+                  <div class="nav__icon nav__icon_search">
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- Home-->
+      <section class="section section_home" id="home">
+        <div class="container">
+          <div class="section__row">
+            <h1 class="section__title">Оперативная печать полиграфии от 1 дня!
+            </h1>
+            <div class="section__text">Доставка в любой город Украины
+            </div><a class="btn btn_order-bye" href="#">Сделать заказ</a>
+          </div>
+        </div>
+      </section>
+      <!-- Production-->
+      <section class="section section_production" id="production">
+        <div class="container">
+          <button class="btn btn_callback btn_callback-production"><i class="btn__icon btn__icon_phone-white"></i><span class="btn__text">Перезвоните <br> мне сейчас!</span>
+          </button>
+          <h2 class="section__title">Продукция
+          </h2>
+          <div class="list-product-type">
+            <div class="list-product-type__item list-product-type__item_1">
+              <div class="list-product-type__col list-product-type__col_1">
+                <div class="list-product-type__icon list-product-type__icon_blank-page">
+                </div>
+              </div>
+              <div class="list-product-type__col list-product-type__col_2">
+                <h4 class="list-product-type__title">Офисная продукция
+                </h4>
+                <div class="list-product-type__name">Визитки
+                </div>
+                <div class="list-product-type__name">Конверты
+                </div>
+                <div class="list-product-type__name">Папки
+                </div>
+                <div class="list-product-type__name">Книги
+                </div>
+                <div class="list-product-type__name">Блокноты
+                </div>
+                <div class="list-product-type__name">Фирменные бланки
+                </div>
+              </div>
+            </div>
+            <div class="list-product-type__item list-product-type__item_2">
+              <div class="list-product-type__col list-product-type__col_1">
+                <div class="list-product-type__icon list-product-type__icon_road-map">
+                </div>
+              </div>
+              <div class="list-product-type__col list-product-type__col_2">
+                <h4 class="list-product-type__title">Рекламная продукция
+                </h4>
+                <div class="list-product-type__name">Листовки
+                </div>
+                <div class="list-product-type__name">Плакаты
+                </div>
+                <div class="list-product-type__name">Флаера
+                </div>
+                <div class="list-product-type__name">Баннеры
+                </div>
+                <div class="list-product-type__name">Буклеты
+                </div>
+                <div class="list-product-type__name">Магниты
+                </div>
+                <div class="list-product-type__name">Календари
+                </div>
+                <div class="list-product-type__name">Наклейки 
+                </div>
+                <div class="list-product-type__name">Блокноты
+                </div>
+              </div>
+            </div>
+            <div class="list-product-type__item list-product-type__item_3">
+              <div class="list-product-type__col list-product-type__col_1">
+                <div class="list-product-type__icon list-product-type__icon_e-reader">
+                </div>
+              </div>
+              <div class="list-product-type__col list-product-type__col_2">
+                <h4 class="list-product-type__title">Для бизнеса
+                </h4>
+                <div class="list-product-type__name">Каталоги
+                </div>
+                <div class="list-product-type__name">Журналы
+                </div>
+                <div class="list-product-type__name">Дисконтные карты
+                </div>
+                <div class="list-product-type__name">Бейджи
+                </div>
+                <div class="list-product-type__name">Гарантиныйные наклейки
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About-->
+      <section class="section section_about" id="about">
+        <div class="container">
+          <h2 class="section__title">О нас
+          </h2>
+          <div class="text-box text-box_about">
+            <h4 class="text-box__title">Оперативная печать полиграфии от 1 дня!
+            </h4>
+            <p class="text-box__text">Перед долгим заплывом намажьтесь солнцезащитным кремом. Вода не спасает от вредного излучения, оно проникает и на глубину 1 м.
+            </p>
+            <p class="text-box__text">Прежде чем отправиться на пляж, съешьте что-нибудь солененькое или выпейте чай с лимоном. Считается, что тем самым вы предотвратите потерю важных минеральных веществ, которые покидают тело вместе с потом, а загар при этом ляжет ровнее. Находясь на солнце, следует больше двигаться — плавать, делать гимнастику, играть в мяч и т.д. 
+            </p>
+            <p class="text-box__text">Лучше ходить босиком, чем в тапочках. Не рекомендуется покрывать ногти лаком, пусть они отдохнут и получат солнечные лучи и воздух.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- News-->
+      <section class="section section_news" id="news">
+        <div class="container">
+          <h2 class="section__title">Новости
+          </h2>
+          <div class="section__row section__row_1">
+            <div class="list-news">
+              <div class="list-news__item"> 
+                <div class="list-news__date">14 марта 2018
+                </div>
+                <h4 class="list-news__title"> <a class="list-news__link" href="#">Оазисное земледелие поднимает культурный субэкваториальный климат, там же можно с палками</a>
+                </h4>
+              </div>
+              <div class="list-news__item">
+                <div class="list-news__date">14 марта 2018
+                </div>
+                <h4 class="list-news__title"> <a class="list-news__link" href="#">Оазисное земледелие поднимает культурный субэкваториальный климат, там же можно с палками</a>
+                </h4>
+              </div>
+              <div class="list-news__item"> 
+                <div class="list-news__date">14 марта 2018
+                </div>
+                <h4 class="list-news__title"> <a class="list-news__link" href="#">Оазисное земледелие поднимает культурный субэкваториальный климат, там же можно с палками</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="section__row section__row_2"><a class="btn btn_see-all-news" href="#">Смотреть все новости</a>
+          </div>
+          <button class="btn btn_callback btn_callback-news"><i class="btn__icon btn__icon_phone-white"></i><span class="btn__text">Перезвоните <br> мне сейчас!</span>
+          </button>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__col footer__col_1">
+              <div class="logo logo_footer"><a class="logo__link" href="#"><img class="logo__img" src="img/logo.svg" alt="" role="presentation"/></a>
+              </div>
+              <div class="text-box text-box_footer-copyright">
+                <div class="text-box__text">2018 — Все права защищены
+                </div>
+              </div>
+            </div>
+            <div class="footer__col footer__col_2">
+              <div class="text-box text-box_footer-regime">
+                <p class="text-box__text text-box__text_1">Качественная оперативная цифровая, широкоформатная и сувенирная полиграфия!
+                </p>
+                <p class="text-box__text text-box__text_2">Работаем с 9 до 18, вс и сб выходные
+                </p>
+              </div>
+            </div>
+            <div class="footer__col footer__col_3">
+              <nav class="nav nav_footer-1">
+                <ul class="nav__list" id="nav-list_footer-1">
+                  <li class="nav__item"><a class="nav__link" href="#">Главная</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#">Новости</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#">Продукция</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#">База знаний</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#">Доставка и оплата</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#">О нас</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__col footer__col_4">
+              <div class="social-btn social-btn_footer"><a class="social-btn__link social-btn__link_facebook" href="#"><i class="social-btn__icon social-btn__icon_facebook"></i></a>
+              </div>
+              <div class="contacts contacts_phone contacts_phone-footer">
+                <div class="contacts__item contacts__item_1"><i class="contacts__icon contacts__icon_phone"></i><a class="contacts__link" href="tel:380443454042">(044) 345-40-42</a><i class="contacts__icon contacts__icon_arrow-bottom-circle show-contacts show-contacts_phone"></i>
+                </div>
+                <div class="contacts__drop-box active">
+                  <div class="contacts__item contacts__item_2"><i class="contacts__icon contacts__icon_mts"></i><a class="contacts__link" href="tel:380994455418">(099) 445-54-18</a>
+                  </div>
+                  <div class="contacts__item contacts__item_3"><i class="contacts__icon contacts__icon_kyivstar"></i><a class="contacts__link" href="tel:380964977803">(096) 497-78-03</a>
+                  </div>
+                  <div class="contacts__item contacts__item_4"><i class="contacts__icon contacts__icon_life"></i><a class="contacts__link" href="tel:38634351681">(063) 435-16-81</a>
+                  </div>
+                </div>
+              </div>
+              <nav class="nav nav_footer-2">
+                <ul class="nav__list" id="nav-list_footer-2">
+                  <li class="nav__item"><a class="nav__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="text-box text-box_development"><i class="text-box__icon text-box__icon_glyanec"></i><a class="text-box__link" href="#"><span class="text-box__text">Глянец — Разработка сайтов</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+      <link rel="stylesheet" href="css/style.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
