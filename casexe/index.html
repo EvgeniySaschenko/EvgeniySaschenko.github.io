@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="imag/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="keywords" content="meta_k .........text"/>
+    <meta name="description" content="meta_d ......text"/>
+    <title>Doc title</title>
+  </head>
+  <body>
+    <style>
+      .preloader{
+      	height: 100vh;
+      	width: 100%;
+      	background-color: rgb(255,255,255);
+      	color: rgb(36,111,176);
+      	font-size: 45px;
+      	font-family:  Arial, sans-serif;
+      	align-items: center;
+      	justify-content: center;
+      	flex-direction: column;
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	display: flex;
+      	z-index: -10000;
+      	opacity: 0;
+      	transition-duration: 1s;
+      }
+      .preloader.noload{
+      	z-index: 10000;
+      	opacity: 1;
+      	transition-duration: 1s;
+      }
+      .wrapper.noload{
+      	display: none;
+      }
+      
+    </style>
+    <div class="preloader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="lds-balls" width="80px" height="80px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="64.6661" cy="64.2234" r="6" fill="#51CACC">
+<animate attributeName="cx" values="75;57.72542485937369" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="50;73.77641290737884" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="fill" values="#51CACC;#9DF871" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+</circle><circle cx="41.0048" cy="68.3436" r="6" fill="#9DF871">
+<animate attributeName="cx" values="57.72542485937369;29.774575140626318" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="73.77641290737884;64.69463130731182" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="fill" values="#9DF871;#E0FF77" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+</circle><circle cx="29.7746" cy="47.1136" r="6" fill="#E0FF77">
+<animate attributeName="cx" values="29.774575140626318;29.774575140626315" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="64.69463130731182;35.30536869268818" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="fill" values="#E0FF77;#DE9DD6" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+</circle><circle cx="46.4952" cy="29.8725" r="6" fill="#DE9DD6">
+<animate attributeName="cx" values="29.774575140626315;57.72542485937368" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="35.30536869268818;26.22358709262116" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="fill" values="#DE9DD6;#FF708E" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+</circle><circle cx="68.0593" cy="40.447" r="6" fill="#FF708E">
+<animate attributeName="cx" values="57.72542485937368;75" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="26.22358709262116;49.99999999999999" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+<animate attributeName="fill" values="#FF708E;#51CACC" keyTimes="0;1" dur="1s" repeatCount="indefinite"/>
+</circle></svg>
+    </div>
+    <div class="wrapper">
+      <script>
+        document.querySelector('.wrapper').classList.add('noload');
+        document.querySelector('.preloader').classList.add('noload');
+        
+        setTimeout( ()=>{
+        	document.querySelector('.wrapper').classList.remove('noload');
+        	document.querySelector('.preloader').classList.remove('noload');
+        }, 2000 );
+        
+      </script>
+      <div class="feedback">
+        <form class="feedback__form"><span class="feedback__close">X</span>
+          <div class="feedback__title">Обратная связь
+          </div>
+          <label class="feedback__label" for="feedback__name">Ваше имя*
+          </label><input class="feedback__field feedback__field_name" name="name" required="required" id="feedback__name" type="text"/>
+          <label class="feedback__label" for="feedback__phone">Телефон*
+          </label><input class="feedback__field feedback__field_phone" name="phone" required="required" id="feedback__phone" type="text"/>
+          <label class="feedback__label" for="feedback__mail">Email*
+          </label><input class="feedback__field feedback__field_mail" name="mail" type="email" required="required" id="feedback__mail"/>
+          <label class="feedback__label" for="feedback__message">Сообщение
+          </label><textarea class="feedback__textarea feedback__textarea_comment" name="message" id="feedback__message"></textarea>
+          <button class="feedback__btn">Отправить
+          </button>
+        </form>
+      </div>
+      <header class="header">
+        <div class="header__row header__row_1">
+          <div class="container">
+            <div class="header__col header__col_1">
+              <!-- Logo--><a class="logo logo_header" href="#"><img class="logo__img" src="img/logo.png" alt="logo" title=""/></a>
+            </div>
+            <div class="header__col header__col_2">
+              <!-- Contacts-->
+              <div class="contacts">
+                <div class="contacts__item"><a class="contacts__link contacts__link_phone" href="tel:74997777777">+7(499) 777-77-77</a>
+                </div>
+                <div class="contacts__item"><a class="contacts__link contacts__link_phone" href="tel:74997777777">+7(499) 777-77-77</a>
+                </div>
+              </div>
+              <!-- Btn-->
+              <button class="btn btn_feedback">Обратная связь
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__row header__row_2">
+          <!-- Nav-->
+          <menu class="menu menu_header">
+            <div class="container">
+              <div class="menu__btn-burger" id="menu__btn-burger_header">
+                <div class="menu__btn-burger-item">
+                </div>
+                <div class="menu__btn-burger-item">
+                </div>
+                <div class="menu__btn-burger-item">
+                </div>
+              </div>
+              <ul class="menu__list" id="menu-list_header">
+                <li class="menu__item"><a class="menu__link" href="#">Главная</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Каталог</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Прайс-лист</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </menu>
+        </div>
+        <div class="header__row header__row_3">
+          <!--Slider-->
+          <div class="slider">
+            <div class="container"><i class="slider__btn slider__btn_prev fas fa-angle-left"></i><i class="slider__btn slider__btn_next fas fa-angle-right"></i>
+              <div class="slider__item"><img class="slider__img" src="http://placekitten.com/1400/400" alt="" role="presentation"/>
+              </div>
+              <div class="slider__item"><img class="slider__img" src="http://placekitten.com/1000/200" alt="" role="presentation"/>
+              </div>
+              <div class="slider__item"><img class="slider__img" src="http://placekitten.com/1920/1080" alt="" role="presentation"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="container">
+          <!-- menu_path-back-->
+          <div class="content__row content__row_1">
+            <div class="menu menu_path-back">
+              <div class="menu__item"> <a class="menu__link" href="">Главная</a>
+              </div>
+              <div class="menu__item"> <a class="menu__link" href="#">Каталог</a>
+              </div>
+              <div class="menu__item"> <a class="menu__link" href="#">Бытовая техника</a>
+              </div>
+            </div>
+          </div>
+          <div class="content__row content__row_2">
+            <!-- sidebar-->
+            <aside class="sidebar sidebar_left leftblock"> 
+              <div class="sidebar__item sidebar__item_1">
+                <menu class="menu menu_sidebar-left">
+                  <div class="menu__btn menu__btn_catalog">Каталог товаров
+                  </div>
+                  <div class="menu__box">
+                    <div class="menu__title">Автомобили
+                    </div>
+                    <ul class="menu__list">
+                      <li class="menu__item"> <a class="menu__link" href="#">Lorem 1</a>
+                      </li>
+                    </ul><a class="menu__title active" href="#">Бытовая техника</a>
+                    <ul class="menu__list">
+                      <li class="menu__item active"> <a class="menu__link" href="#">Микроволновки</a>
+                      </li>
+                      <li class="menu__item"> <a class="menu__link" href="#">Холодильники</a>
+                      </li>
+                      <li class="menu__item"> <a class="menu__link" href="#">Посудомоечные машины</a>
+                      </li>
+                      <li class="menu__item"> <a class="menu__link" href="#">Чайники</a>
+                      </li>
+                    </ul>
+                    <div class="menu__title">Мобильная техника
+                    </div>
+                    <ul class="menu__list">
+                      <li class="menu__item"> <a class="menu__link" href="#">Lorem 1</a>
+                      </li>
+                    </ul>
+                    <div class="menu__title">Компьютеры
+                    </div>
+                    <ul class="menu__list">
+                      <li class="menu__item"> <a class="menu__link" href="#">Lorem 1</a>
+                      </li>
+                    </ul>
+                    <div class="menu__title">Одежда
+                    </div>
+                    <ul class="menu__list">
+                      <li class="menu__item"> <a class="menu__link" href="#">Lorem 1</a>
+                      </li>
+                    </ul>
+                    <div class="menu__title">Недвижимость
+                    </div>
+                    <ul class="menu__list">
+                      <li class="menu__item"> <a class="menu__link" href="#">Lorem 1</a>
+                      </li>
+                    </ul>
+                  </div>
+                </menu>
+              </div>
+              <div class="sidebar__item sidebar__item_2"><a class="btn btn_price-list" href="#"><i class="btn__icon fas fa-file-excel"></i><span class="btn__text">Прайс-лист</span></a>
+              </div>
+            </aside>
+            <!-- Main-->
+            <main class="main centerblock" role="main">
+              <!-- list production-->
+              <div class="list-product">
+                <div class="list-product__item"><span class="list-product__box-img"><img class="list-product__img" src="http://placekitten.com/290/350" alt="" role="presentation"/></span>
+                  <p class="list-product__text">Самый клевый чайник, который надо купить!
+                  </p>
+                  <div class="list-product__box-buy"><span class="list-product__price">1900<span class="list-product__currency">р.</span></span><i class="list-product__btn fas fa-cart-plus"></i>
+                  </div>
+                </div>
+                <div class="list-product__item"><span class="list-product__box-img"><img class="list-product__img" src="http://placekitten.com/400/350" alt="" role="presentation"/></span>
+                  <p class="list-product__text">Самый клевый чайник, который надо купить!
+                  </p>
+                  <div class="list-product__box-buy"><span class="list-product__price">1900<span class="list-product__currency">р.</span></span><i class="list-product__btn fas fa-cart-plus"></i>
+                  </div>
+                </div>
+                <div class="list-product__item"><span class="list-product__box-img"><img class="list-product__img" src="http://placekitten.com/400/400" alt="" role="presentation"/></span>
+                  <p class="list-product__text">Самый клевый чайник, который надо купить!
+                  </p>
+                  <div class="list-product__box-buy"><span class="list-product__price">1900<span class="list-product__currency">р.</span></span><i class="list-product__btn fas fa-cart-plus"></i>
+                  </div>
+                </div>
+                <div class="list-product__item"><span class="list-product__box-img"><img class="list-product__img" src="http://placekitten.com/50/50" alt="" role="presentation"/></span>
+                  <p class="list-product__text">Самый клевый чайник, который надо купить!
+                  </p>
+                  <div class="list-product__box-buy"><span class="list-product__price">1900<span class="list-product__currency">р.</span></span><i class="list-product__btn fas fa-cart-plus"></i>
+                  </div>
+                </div>
+                <div class="list-product__item"><span class="list-product__box-img"><img class="list-product__img" src="http://placekitten.com/200/200" alt="" role="presentation"/></span>
+                  <p class="list-product__text">Самый клевый чайник, который надо купить!
+                  </p>
+                  <div class="list-product__box-buy"><span class="list-product__price">1900<span class="list-product__currency">р.</span></span><i class="list-product__btn fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination"><a class="pagination__link" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link active" href="#">3</a><a class="pagination__link" href="#">4</a><a class="pagination__link" href="#">5</a><a class="pagination__link" href="#">6</a><a class="pagination__link" href="#">7</a>
+              </div>
+              <div class="text-box text-box_about">
+                <p class="text-box__text">Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. 
+                </p>
+                <p class="text-box__text">Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офисе.
+                </p>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__col footer__col_1">
+              <div class="copyright">
+                <div class="copyright__text">© 2012–2013 ЗАО «Компания»
+                </div><a class="copyright__link copyright__link_mail" href="mailto:info@name.ru">info@name.ru</a>
+              </div>
+            </div>
+            <div class="footer__col footer__col_2">
+              <ul class="menu menu_footer">
+                <li class="menu__item"><a class="menu__link" href="#">Главная</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Каталог</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Доставка и оплата</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Прайс-лист</a>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col_3">
+              <div class="logo logo_dev"><img class="logo__img" src="img/logo_dev.png" alt="logo dev" title=""/>
+                <div class="logo__text"><a class="logo__link" href="#">Разработка сайта — <br></a>
+                  <SPAN>компания «Пиксель Плюс»</SPAN>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="css/style.css"/>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
