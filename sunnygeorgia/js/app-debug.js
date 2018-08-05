@@ -14,6 +14,26 @@
 		$(this).parents('.form__list').find('.form__checkbox').prop('checked', true);
 	});
 })();
+"use strict";
+
+// Кнопка бургер
+(function () {
+	$('.btn_burger-header').on("click", function () {
+		$(this).toggleClass("active");
+		$(".nav_header").toggleClass("active");
+	});
+})();
+
+// Меню
+(function () {
+	$('.nav__item').on("click", function () {
+		var active = $(this).hasClass("active") ? true : false;
+		$('.nav__item').removeClass("active");
+		if (!active) {
+			$(this).addClass("active");
+		}
+	});
+})();
 'use strict';
 
 (function () {
@@ -57,26 +77,6 @@
 	});
 
 	//
-})();
-"use strict";
-
-// Кнопка бургер
-(function () {
-	$('.btn_burger-header').on("click", function () {
-		$(this).toggleClass("active");
-		$(".nav_header").toggleClass("active");
-	});
-})();
-
-// Меню
-(function () {
-	$('.nav__item').on("click", function () {
-		var active = $(this).hasClass("active") ? true : false;
-		$('.nav__item').removeClass("active");
-		if (!active) {
-			$(this).addClass("active");
-		}
-	});
 })();
 'use strict';
 
