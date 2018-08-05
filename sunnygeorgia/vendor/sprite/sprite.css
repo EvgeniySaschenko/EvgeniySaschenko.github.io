@@ -16,45 +16,45 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-arrow-2-down {
-  background-image: url(sprite.png);
-  background-position: -39px -19px;
-  width: 10px;
-  height: 10px;
-}
-.icon-calendar {
-  background-image: url(sprite.png);
-  background-position: 0px -36px;
-  width: 16px;
-  height: 18px;
-}
-.icon-car {
-  background-image: url(sprite.png);
-  background-position: -19px 0px;
-  width: 20px;
-  height: 17px;
-}
-.icon-checkbox {
-  background-image: url(sprite.png);
-  background-position: -17px -18px;
-  width: 17px;
-  height: 17px;
-}
-.icon-excursion {
+.icon-facebook {
   background-image: url(sprite.png);
   background-position: 0px 0px;
-  width: 19px;
-  height: 18px;
+  width: 31px;
+  height: 31px;
 }
-.icon-home {
+.icon-instagram {
   background-image: url(sprite.png);
-  background-position: -39px 0px;
-  width: 16px;
-  height: 19px;
+  background-position: -31px 0px;
+  width: 30px;
+  height: 30px;
 }
-.icon-tours {
+.icon-location {
   background-image: url(sprite.png);
-  background-position: 0px -18px;
-  width: 17px;
-  height: 18px;
+  background-position: -61px -42px;
+  width: 11px;
+  height: 14px;
+}
+.icon-odnoklassniki {
+  background-image: url(sprite.png);
+  background-position: 0px -31px;
+  width: 30px;
+  height: 30px;
+}
+.icon-star-not-active {
+  background-image: url(sprite.png);
+  background-position: -61px 0px;
+  width: 20px;
+  height: 21px;
+}
+.icon-star {
+  background-image: url(sprite.png);
+  background-position: -61px -21px;
+  width: 20px;
+  height: 21px;
+}
+.icon-vk {
+  background-image: url(sprite.png);
+  background-position: -30px -31px;
+  width: 30px;
+  height: 30px;
 }
