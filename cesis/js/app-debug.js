@@ -91,8 +91,10 @@ function smoothScroll(eID) {
 	var btnClose = document.getElementById('btn_burger-header-close');
 	var funActiveMenu__item = function funActiveMenu__item(event, el) {
 		var _loop = function _loop(i, l) {
+			el[i].classList.remove('active');
 			el[i].addEventListener(event, function () {
 				smoothScroll(el[i].getAttribute('data-section'));
+				el[i].classList.add('active');
 				btnClose.click();
 			});
 		};
