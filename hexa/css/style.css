@@ -308,6 +308,10 @@ input[type="submit"] {
   padding: 10px 18px;
 }
 
+.btn_header-slider:visited {
+  color: #ffffff;
+}
+
 .btn_header-nav {
   display: none;
   -webkit-box-align: center;
