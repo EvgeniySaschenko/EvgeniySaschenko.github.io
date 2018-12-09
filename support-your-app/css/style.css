@@ -212,8 +212,8 @@ input[type="submit"] {
             transform: perspective(400px) rotateX(-25deg);
     -webkit-transform-origin: top;
             transform-origin: top;
-    -webkit-animation: formAnimate .6s forwards;
-            animation: formAnimate .6s forwards; }
+    -webkit-animation: formAnimate 1s forwards;
+            animation: formAnimate 1s forwards; }
   .form__logo {
     width: 100px;
     height: 100px;
@@ -316,8 +316,8 @@ input[type="submit"] {
         -ms-flex-pack: center;
             justify-content: center; }
   .wrapper.show-bg {
-    -webkit-transition: 2s;
-    transition: 2s;
+    -webkit-transition: 2.4s;
+    transition: 2.4s;
     background-color: transparent; }
   .wrapper__substrate {
     width: 100%;
