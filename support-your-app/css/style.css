@@ -1,0 +1,328 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ''; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/HelveticaNeue/HelveticaNeue-Light.woff);
+  font-display: swap; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  color: #1b232b;
+  font-family: 'HelveticaNeue', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s; }
+
+button,
+input[type="checkbox"],
+input[type="submit"] {
+  border: none;
+  outline: none; }
+
+button,
+input[type="submit"] {
+  cursor: pointer; }
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.btn {
+  background-color: #3e9ffd;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 16px; }
+
+@-webkit-keyframes formAnimate {
+  0 {
+    -webkit-transform: rotateX(-45deg);
+            transform: rotateX(-45deg); }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0); } }
+
+@keyframes formAnimate {
+  0 {
+    -webkit-transform: rotateX(-45deg);
+            transform: rotateX(-45deg); }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0); } }
+
+@-webkit-keyframes formLogoAnimate {
+  0 {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg); }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0); } }
+
+@keyframes formLogoAnimate {
+  0 {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg); }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0); } }
+
+@-webkit-keyframes formLogoAnimate_1 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(100px);
+            transform: perspective(150px) translateY(-100px) translateZ(100px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@keyframes formLogoAnimate_1 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(100px);
+            transform: perspective(150px) translateY(-100px) translateZ(100px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@-webkit-keyframes formLogoAnimate_2 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(80px);
+            transform: perspective(150px) translateY(-100px) translateZ(80px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@keyframes formLogoAnimate_2 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(80px);
+            transform: perspective(150px) translateY(-100px) translateZ(80px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@-webkit-keyframes formLogoAnimate_3 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(20px);
+            transform: perspective(150px) translateY(-100px) translateZ(20px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@keyframes formLogoAnimate_3 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(20px);
+            transform: perspective(150px) translateY(-100px) translateZ(20px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@-webkit-keyframes formLogoAnimate_4 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(60px);
+            transform: perspective(150px) translateY(-100px) translateZ(60px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+@keyframes formLogoAnimate_4 {
+  0 {
+    -webkit-transform: perspective(150px) translateY(-100px) translateZ(60px);
+            transform: perspective(150px) translateY(-100px) translateZ(60px); }
+  100% {
+    -webkit-transform: perspective(0) translateY(0) translateZ(0);
+            transform: perspective(0) translateY(0) translateZ(0); } }
+
+.form {
+  position: relative; }
+  .form ::-webkit-input-placeholder {
+    font-size: 16px;
+    color: rgba(27, 35, 43, 0.3); }
+  .form ::-ms-input-placeholder {
+    font-size: 16px;
+    color: rgba(27, 35, 43, 0.3); }
+  .form ::placeholder {
+    font-size: 16px;
+    color: rgba(27, 35, 43, 0.3); }
+  .form_entry-app {
+    max-width: 360px;
+    width: 100%;
+    padding: 79px 20px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-transform: perspective(400px) rotateX(-25deg);
+            transform: perspective(400px) rotateX(-25deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-animation: formAnimate .6s forwards;
+            animation: formAnimate .6s forwards; }
+  .form__logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    -webkit-transform: perspective(200px) rotateX(60deg);
+            transform: perspective(200px) rotateX(60deg);
+    -webkit-animation: formLogoAnimate .6s forwards;
+            animation: formLogoAnimate .6s forwards; }
+    .form__logo-item {
+      height: 30px;
+      width: 30px;
+      border-radius: 7px;
+      opacity: .8;
+      position: absolute; }
+      .form__logo-item_1 {
+        background-color: orange;
+        top: 17px;
+        left: 29px;
+        -webkit-transform: perspective(150px) translateY(-100px) translateZ(100px);
+                transform: perspective(150px) translateY(-100px) translateZ(100px);
+        -webkit-animation: formLogoAnimate_1 .5s forwards;
+                animation: formLogoAnimate_1 .5s forwards; }
+      .form__logo-item_2 {
+        background-color: DeepPink;
+        top: 32px;
+        left: 43px;
+        -webkit-transform: perspective(150px) translateY(-100px) translateZ(80px);
+                transform: perspective(150px) translateY(-100px) translateZ(80px);
+        -webkit-animation: formLogoAnimate_2 .4s forwards;
+                animation: formLogoAnimate_2 .4s forwards; }
+      .form__logo-item_3 {
+        background-color: blue;
+        top: 47px;
+        left: 29px;
+        -webkit-transform: perspective(150px) translateY(-100px) translateZ(20px);
+                transform: perspective(150px) translateY(-100px) translateZ(20px);
+        -webkit-animation: formLogoAnimate_3 .3s forwards;
+                animation: formLogoAnimate_3 .3s forwards; }
+      .form__logo-item_4 {
+        background-color: green;
+        top: 62px;
+        left: 43px;
+        -webkit-transform: perspective(150px) translateY(-100px) translateZ(60px);
+                transform: perspective(150px) translateY(-100px) translateZ(60px);
+        -webkit-animation: formLogoAnimate_4 .2s forwards;
+                animation: formLogoAnimate_4 .2s forwards; }
+  .form__item {
+    margin-bottom: 20px; }
+  .form__field {
+    width: 100%;
+    padding: 15px 10px; }
+    .form__field:focus {
+      border: 2px solid #3e9ffd; }
+  .form__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 35px; }
+    .form__title-small {
+      font-size: 15px;
+      color: rgba(27, 35, 43, 0.5); }
+  .form__btn {
+    width: 100%;
+    margin-top: 20px; }
+  .form__checkbox {
+    display: none; }
+  .form__checkbox:checked ~ .form__label-checkbox {
+    background-image: url(../img/checkbox.png);
+    background-size: contain; }
+  .form__label {
+    cursor: pointer; }
+  .form__label-checkbox {
+    margin-right: 7px;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: #3e9ffd;
+    border-radius: 2px; }
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-color: #e5e5e5; }
+  .wrapper_entry-app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .wrapper.show-bg {
+    -webkit-transition: 2s;
+    transition: 2s;
+    background-color: transparent; }
+  .wrapper__substrate {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
