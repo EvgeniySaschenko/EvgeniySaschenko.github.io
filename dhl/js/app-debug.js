@@ -43,33 +43,6 @@
 'use strict';
 
 (function () {
-	var mySwiper = new Swiper('.brief-article_services', {
-		slidesPerView: 'auto',
-		spaceBetween: 30,
-		loop: true,
-		breakpoints: {
-			770: {
-				slidesPerView: 1,
-				effect: 'flip',
-				pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: true
-				}
-			},
-			1190: {
-				slidesPerView: 2,
-				spaceBetween: 20,
-				pagination: {
-					el: '.swiper-pagination',
-					dynamicBullets: true
-				}
-			}
-		}
-	});
-})();
-'use strict';
-
-(function () {
 	var toggleBtn = function toggleBtn(idBtn) {
 		var cb = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
@@ -93,6 +66,33 @@
 	toggleBtn('btn_services-inter', function () {
 		var video__iframe = document.querySelector('#video_services-inter .video__iframe');
 		video__iframe.src = 'https://www.youtube.com/embed/VMKTEyLQYh8?autoplay=1';
+	});
+})();
+'use strict';
+
+(function () {
+	var mySwiper = new Swiper('.brief-article_services', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+		breakpoints: {
+			770: {
+				slidesPerView: 1,
+				effect: 'flip',
+				pagination: {
+					el: '.swiper-pagination',
+					dynamicBullets: true
+				}
+			},
+			1190: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				pagination: {
+					el: '.swiper-pagination',
+					dynamicBullets: true
+				}
+			}
+		}
 	});
 })();
 'use strict';
@@ -143,6 +143,15 @@
 'use strict';
 
 (function () {
+	var logo_header = document.getElementById('logo_header');
+	logo_header.classList.add('animated');
+	setTimeout(function () {
+		logo_header.classList.add('bounceInLeft');
+	}, 1050);
+})();
+'use strict';
+
+(function () {
 	var modal__close = function modal__close(el) {
 		var cb = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
@@ -178,6 +187,32 @@
 	var nav_header = document.querySelectorAll('.nav_header .nav__item');
 	funActiveMenu__item('click', nav_header);
 	funActiveMenu__item('touch', nav_header);
+})();
+"use strict";
+'use strict';
+
+(function () {
+	var section__title_services = document.getElementById('section__title_services');
+	section__title_services.classList.add('animated');
+	var waypoint = new Waypoint({
+		element: section__title_services,
+		handler: function handler() {
+			section__title_services.classList.add('bounceInLeft');
+		},
+		offset: '75%'
+	});
+})();
+
+(function () {
+	var section_clients = document.getElementById('section_clients');
+	section_clients.classList.add('animated');
+	var waypoint = new Waypoint({
+		element: section_clients,
+		handler: function handler() {
+			section_clients.classList.add('bounceInLeft');
+		},
+		offset: '75%'
+	});
 })();
 'use strict';
 
