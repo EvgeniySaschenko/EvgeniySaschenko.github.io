@@ -5,12 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
+    <style>
+      .preloader{
+      	min-height: 100vh;
+      	height: 100%;
+      	width: 100%;
+      	background-color: #02b875;
+      	color: #ffffff;
+      	font-size: 45px;
+      	font-family:  Arial, sans-serif;
+      	align-items: center;
+      	justify-content: center;
+      	flex-direction: column;
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	transition-duration: 1s;
+      	display: none;
+      	z-index: 10000;
+      }
+      .preloader.noload{
+      display: flex;
+      }
+      .preloader__text_1{
+      font-size: 45px;
+      }
+      .preloader__text_2{
+      font-size: 20px;
+      }
+      .wrapper.noload{
+      display: none;
+      }
+    </style>
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+      	setTimeout(function(){
+      		document.querySelector('.preloader').classList.remove('noload');
+      	}, 1000);
+      });
+      
+      
+    </script>
+    <div class="preloader">
+      <IMG class="img" src="img/logo.png"></IMG>
+    </div>
     <div class="wrapper">
+      <script>document.querySelector('.preloader').classList.add('noload');</script>
       <header class="header">
         <div class="container">
-          <div class="logo"><img class="logo__img" src="img/logo.svg" alt="" role="presentation"/><span class="logo__text">Монстр торгов</span>
+          <div class="logo"><img class="logo__img" src="img/logo.png" alt="" role="presentation"/><span class="logo__text">Монстр торгов</span>
           </div>
           <nav class="nav nav_header"><input class="nav__input-checkbox nav__input-checkbox_btn-burger" type="checkbox" id="btn-burger_header"/>
             <label class="nav__label nav__label_btn-burger fa fa-bars" for="btn-burger_header">
