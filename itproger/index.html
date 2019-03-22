@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <meta name="keywords" content="meta_k .........text"/>
+    <meta name="description" content="meta_d ......text"/>
+    <title>Doc title</title>
+    <style>
+      .preloader{
+      	min-height: 100vh;
+      	height: 100%;
+      	width: 100%;
+      	background-color: rgb(255,255,255);
+      	color: rgb(36,111,176);
+      	font-size: 45px;
+      	font-family:  Arial, sans-serif;
+      	align-items: center;
+      	justify-content: center;
+      	flex-direction: column;
+      	position: fixed;
+      	top: 0;
+      	left: 0;
+      	transition-duration: 1s;
+      	display: none;
+      	z-index: 10000;
+      }
+      .preloader.noload{
+      display: flex;
+      }
+      .preloader__text_1{
+      font-size: 45px;
+      }
+      .preloader__text_2{
+      font-size: 20px;
+      }
+      .wrapper.noload{
+      display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+      	document.querySelector('.preloader').classList.remove('noload');
+      });
+      
+    </script>
+    <div class="preloader">
+      <div class="preloader__text_1">Loading</div><img src="img/preloader.gif"/>
+    </div>
+    <div class="wrapper">
+      <script>
+        document.querySelector('.preloader').classList.add('noload');
+        
+      </script>
+      <div class="container">
+        <div class="profession profession_front-end">
+          <div class="profession__row">
+            <div class="profession__col profession__col_1">
+              <h2 class="profession__title">Front-End
+              </h2>
+              <div class="profession__box-content">
+                <div class="profession__description">Професия Front-End разработчик
+                </div>
+                <ul class="profession__list-tech">
+                  <li class="profession__list-tech-item">HTML5
+                  </li>
+                  <li class="profession__list-tech-item">CSS3
+                  </li>
+                  <li class="profession__list-tech-item">SASS
+                  </li>
+                  <li class="profession__list-tech-item">JavaScript
+                  </li>
+                  <li class="profession__list-tech-item">jQuery
+                  </li>
+                  <li class="profession__list-tech-item">Bootstrap
+                  </li>
+                  <li class="profession__list-tech-item">Git
+                  </li>
+                </ul>
+                <div class="profession__list-time">
+                  <div class="profession__list-time-item">
+                    <div class="profession__list-time-name">Старт:
+                    </div>
+                    <div class="profession__list-time-value">16.04.2019 в 19:00
+                    </div>
+                  </div>
+                  <div class="profession__list-time-item">
+                    <div class="profession__list-time-name">До старта:
+                    </div>
+                    <div class="profession__list-time-value">27 д. 5 ч. 50 м.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="profession__box-btn">
+                <button class="profession__btn btn btn_regular">Записатся на курс
+                </button><a class="profession__btn btn btn_transparent" href="#">Программа обучения</a>
+              </div>
+            </div>
+            <div class="profession__col profession__col_2" style="background-image: url(img/prof-front-end.png)">
+              <div class="profession__video-play">
+                <I class="fas fa-play"></I>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
