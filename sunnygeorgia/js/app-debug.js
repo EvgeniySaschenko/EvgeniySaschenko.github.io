@@ -131,24 +131,6 @@
 })();
 'use strict';
 
-// Активный пункт меню
-(function () {
-	var funActiveMenu__item = function funActiveMenu__item(event, el) {
-		for (var i = 0, l = el.length; l > i; i++) {
-			el[i].addEventListener(event, function (e) {
-				for (var j = 0, l2 = el.length; l2 > j; j++) {
-					el[j].classList.remove('active');
-				}
-				e.target.parentNode.classList.add('active');
-			});
-		}
-	};
-	var nav_header = document.querySelectorAll('.nav_header .nav__item');
-	funActiveMenu__item('click', nav_header);
-	funActiveMenu__item('touch', nav_header);
-})();
-'use strict';
-
 (function () {
 	var modal__close = function modal__close(event, el) {
 		var modal__close = document.querySelectorAll(el);
@@ -164,6 +146,24 @@
 
 	modal__close('click', '.form__modal-close');
 	modal__close('touch', '.form__modal-close');
+})();
+'use strict';
+
+// Активный пункт меню
+(function () {
+	var funActiveMenu__item = function funActiveMenu__item(event, el) {
+		for (var i = 0, l = el.length; l > i; i++) {
+			el[i].addEventListener(event, function (e) {
+				for (var j = 0, l2 = el.length; l2 > j; j++) {
+					el[j].classList.remove('active');
+				}
+				e.target.parentNode.classList.add('active');
+			});
+		}
+	};
+	var nav_header = document.querySelectorAll('.nav_header .nav__item');
+	funActiveMenu__item('click', nav_header);
+	funActiveMenu__item('touch', nav_header);
 })();
 'use strict';
 

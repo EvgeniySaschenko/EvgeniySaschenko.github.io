@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager-->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PML3RJN');
-    </script>
-    <!-- End Google Tag Manager-->
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
@@ -28,18 +19,13 @@
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript)-->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PML3RJN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscrip-->
     <style>
       .preloader{
       	min-height: 100vh;
       	height: 100%;
       	width: 100%;
-      	background-color: rgb(255,255,255);
-      	color: rgb(36,111,176);
+      	background-color: #1e2a35;
+      	color: rgb(255,255,255);
       	font-size: 45px;
       	font-family:  Arial, sans-serif;
       	align-items: center;
@@ -65,8 +51,20 @@
       display: none;
       }
     </style>
-    <div class="preloader"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+      	document.querySelector('.preloader').classList.remove('noload');
+      });
+      
+    </script>
+    <div class="preloader">
+      <IMG src="img/preloader.png" alt="preloader"></IMG>
+    </div>
     <div class="wrapper">
+      <script>
+        document.querySelector('.preloader').classList.add('noload');
+        
+      </script>
       <header class="header header_en">
         <div class="container">
           <div class="header__row">
